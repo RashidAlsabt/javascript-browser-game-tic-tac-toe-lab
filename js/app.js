@@ -67,7 +67,7 @@ const winningCombos = [
     [2, 4, 6],
 ]
 
-const placePeice = (index) => {
+const placePiece = (index) => {
     board[index] = turn
     console.log(board)
 }
@@ -106,7 +106,7 @@ const handleClick = (event) => {
     const squareIndex = parseInt(event.target.id)
 
     if (board[squareIndex] || winner) return
-    placePeice(squareIndex)
+    placePiece(squareIndex)
     checkForWinner()
     checkForTie()
     render()
